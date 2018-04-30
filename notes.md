@@ -109,3 +109,90 @@ For... of loop
 
 Data that is iterable, includes the data types String, Array, Map, and Set. Not Object data type (i.e. {}). Objects are not iterable, by default.
 
+Biggest downside of a for loop is having to keep track of the **counter** and **exit condition**.
+
+For loop:
+```
+const digits = [0, 1, 2, 3, 4, 5, 6, 7, 8, 9];
+
+for (let i = 0; i < digits.length; i++) {
+  console.log(digits[i]);
+}
+```
+For in loop
+```
+const digits = [0, 1, 2, 3, 4, 5, 6, 7, 8, 9];
+
+for (const index in digits) {
+  console.log(digits[index]);
+}
+```
+Issue of using an index to access the values of the array
+If you add any additional properties to the array's prototype, then those properties will also appear in the loop.
+
+
+
+```
+Array.prototype.decimalfy = function() {
+  for (let i = 0; i < this.length; i++) {
+    this[i] = this[i].toFixed(2);
+  }
+};
+
+const digits = [0, 1, 2, 3, 4, 5, 6, 7, 8, 9];
+
+for (const index in digits) {
+  console.log(digits[index]);
+}
+```
+
+
+```
+Prints:
+0
+1
+2
+3
+4
+5
+6
+7
+8
+9
+function() {
+ for (let i = 0; i < this.length; i++) {
+  this[i] = this[i].toFixed(2);
+ }
+}
+```
+
+forEach() is actually an array method, so it can only be used exclusively with arrays. There is also no way to stop or break a forEach loop.
+
+
+8-12 For...of loop
+------------------
+
+```
+const digits = [0, 1, 2, 3, 4, 5, 6, 7, 8, 9];
+
+for (const digit of digits) {
+  console.log(digit);
+}
+```
+```
+Prints:
+0
+1
+2
+3
+4
+5
+6
+7
+8
+9
+```
+
+
+It’s good practice to use plural names for objects that are collections of values. That way, when you loop over the collection, you can use the singular version of the name when referencing individual values in the collection. For example, for (const button of buttons) {...}.
+
