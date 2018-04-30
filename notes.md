@@ -67,6 +67,45 @@ let carat = 21.29;
 
 const gemstone = {
   type, color, carat
+};  
+
+console.log(gemstone); // Prints: Object {type: "quartz", color: "rose", carat: 21.29}
+
+
+Shortened Method Names:
+
+Before:
+
+let type = 'quartz';
+let color = 'rose';
+let carat = 21.29;
+
+const gemstone = {
+  type,
+  color,
+  carat,
+  calculateWorth: function() {
+    // will calculate worth of gemstone based on type, color, and carat
+  }
 };
 
-console.log(gemstone);
+After:
+
+let gemstone = {
+  type,
+  color,
+  carat,
+  calculateWorth() { ... }
+};
+
+
+
+8-10 Iteration
+--------------
+
+Iterable protocol
+
+For... of loop
+
+Data that is iterable, includes the data types String, Array, Map, and Set. Not Object data type (i.e. {}). Objects are not iterable, by default.
+
