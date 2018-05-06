@@ -230,3 +230,80 @@ Prints:
 The for...of loop will only loop over the values in the object.
 
 
+8-14 Spread Operator
+--------------------
+
+The spread operator ( ... ) lets you expand, or spread, iterable objects into multiple elements.
+
+```
+const books = ["Don Quixote", "The Hobbit", "Alice in Wonderland", "Tale of Two Cities"];
+console.log(...books);
+```
+
+Prints: Don Quixote The Hobbit Alice in Wonderland Tale of Two Cities
+
+```
+const primes = new Set([2, 3, 5, 7, 11, 13, 17, 19, 23, 29]);
+console.log(...primes);
+```
+
+Prints: 2 3 5 7 11 13 17 19 23 29
+
+
+**Previously, only concat() is available to combine multiple arrays**
+
+```
+const fruits = ["apples", "bananas", "pears"];
+const vegetables = ["corn", "potatoes", "carrots"];
+const produce = fruits.concat(vegetables);
+console.log(produce);
+```
+
+Prints: ["apples", "bananas", "pears", "corn", "potatoes", "carrots"]
+
+**Using spread operator:**
+
+```
+const fruits = ["apples", "bananas", "pears"];
+const vegetables = ["corn", "potatoes", "carrots"];
+const produce = [...fruits, ...vegetables];
+console.log(produce);
+```
+
+Prints: [ 'apples', 'bananas', 'pears', 'corn', 'potatoes', 'carrots' ]
+
+
+Rest parameter merge items in an array.
+This following takes the values of the order array and assigns them to individual variables using destructuring. 
+`total`, `subtotal`, and `tax` are assigned the first three values in the array.
+`items` is assigned the _
+rest_ of the values in the array (as an array).
+
+```
+const order = [20.17, 18.67, 1.50, "cheese", "eggs", "milk", "bread"];
+const [total, subtotal, tax, ...items] = order;
+console.log(total, subtotal, tax, items);
+```
+
+Prints: 20.17 18.67 1.5 ["cheese", "eggs", "milk", "bread"]
+
+
+**Variadic functions**
+
+Variadic functions are functions that take an indefinite number of arguments.
+
+```
+sum(1, 2);
+sum(10, 36, 7, 84, 90, 110);
+sum(-23, 3000, 575000);
+```
+
+`sum()` always return the total sum of the numbers.
+
+
+
+
+
+
+
+
