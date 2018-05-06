@@ -196,3 +196,37 @@ Prints:
 
 It’s good practice to use plural names for objects that are collections of values. That way, when you loop over the collection, you can use the singular version of the name when referencing individual values in the collection. For example, for (const button of buttons) {...}.
 
+
+
+You can stop or break a for...of loop at anytime.
+
+```
+// Why is this first section used here?
+Array.prototype.decimalfy = function() {
+  for (i = 0; i < this.length; i++) {
+    this[i] = this[i].toFixed(2);
+  }
+};
+
+
+const digits = [0, 1, 2, 3, 4, 5, 6, 7, 8, 9];
+
+for (const digit of digits) {
+  if (digit % 2 === 0) {
+    continue;
+  }
+  console.log(digit);
+}
+```
+```
+Prints:
+1
+3
+5
+7
+9
+```
+
+The for...of loop will only loop over the values in the object.
+
+
