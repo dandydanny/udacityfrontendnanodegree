@@ -329,5 +329,12 @@ Issues:
 12-8 Setting the viewport
 <metal name="viewport" content="width=device-width,initial-scale=1">
 
+12-10 Max-width
+Catch-all to dis-allow media overflowing beyond container:
+
+img, embed, object, video {
+  max-width: 100%;
+}
+
 
 
