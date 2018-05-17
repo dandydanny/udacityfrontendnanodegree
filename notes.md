@@ -301,9 +301,33 @@ sum(-23, 3000, 575000);
 `sum()` always return the total sum of the numbers.
 
 
+**Argument Object**
+
+The arguments object is an array-like object that is available as a local variable inside all functions. It contains a value for each argument being passed to the function starting at 0 for the first argument, 1 for the second argument, and so on.
+
+Implementation of our sum(). Notice how the arguments object could be used to handle the variable amount of numbers being passed to it.
+
+```
+function sum() {
+  let total = 0;  
+  for(const argument of arguments) {
+    total += argument;
+  }
+  return total;
+}
+```
+
+Issues:
+1. sum() does not have parameters, but we know it can handle infinite params
+2. Can be hard to understand (where did the args go?)
 
 
 
+
+
+
+12-8 Setting the viewport
+<metal name="viewport" content="width=device-width,initial-scale=1">
 
 
 
