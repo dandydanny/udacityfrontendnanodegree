@@ -338,3 +338,14 @@ img, embed, object, video {
 
 
 
+13-13 Complex media queries
+
+//Decision based on if width between 500 and 600 px
+@media screen and (min-width: 500px) and (max-width: 600px) {
+  .yes {
+    opacity: 1;
+  }
+  .no {
+    opacity: 0;
+  }
+}
