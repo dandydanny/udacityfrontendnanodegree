@@ -374,3 +374,8 @@ nav.open {
   -webkit-transform: translate(0, 0);
   transform: translate(0, 0);
 }
+
+//Stop even propagation
+e.stopPropagation()
+
+https://developer.mozilla.org/en-US/docs/Web/API/Document_Object_Model/Examples#Example_5:_Event_Propagation
