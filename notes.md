@@ -349,3 +349,28 @@ img, embed, object, video {
     opacity: 0;
   }
 }
+
+14-9 Hamburger Menu
+
+//JS used to toggle .open class
+
+menu.addEventListener('click', function(e) {
+  drawer.classList.toggle('open');
+  e.stopPropagation();
+});
+
+//CSS
+
+nav {
+  width: 300px;
+  position: absolute;
+  /* This trasform moves the drawer off canvas. */
+  -webkit-transform: translate(-300px, 0);
+  transform: translate(-300px, 0);
+  /* Optionally, we animate the drawer. */
+  transition: transform 0.3s ease;
+}
+nav.open {
+  -webkit-transform: translate(0, 0);
+  transform: translate(0, 0);
+}
