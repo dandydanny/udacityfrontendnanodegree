@@ -379,3 +379,10 @@ nav.open {
 e.stopPropagation()
 
 https://developer.mozilla.org/en-US/docs/Web/API/Document_Object_Model/Examples#Example_5:_Event_Propagation
+
+//CSS catch-all so embedded contents don't overflow container:img,
+video,
+object,
+embed {
+    max-width: 100%;
+}
