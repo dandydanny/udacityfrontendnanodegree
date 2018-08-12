@@ -303,9 +303,10 @@ sum(-23, 3000, 575000);
 
 **Argument Object**
 
-The arguments object is an array-like object that is available as a local variable inside all functions. It contains a value for each argument being passed to the function starting at 0 for the first argument, 1 for the second argument, and so on.
+An array-like object that is available as a local variable inside all functions. It contains a value for each argument being passed to the function starting at 0 for the first argument, 1 for the second argument, and so on.
 
-Implementation of our sum(). Notice how the arguments object could be used to handle the variable amount of numbers being passed to it.
+Implementation of our sum(). 
+Notice how the arguments object could be used to handle the variable amount of numbers being passed to it.
 
 ```
 function sum() {
@@ -321,6 +322,48 @@ Issues:
 1. sum() does not have parameters, but we know it can handle infinite params
 2. Can be hard to understand (where did the args go?)
 
+Fortunately, with the addition of the rest parameter, you can rewrite the sum() function to read more clearly.
+
+```
+function sum(...nums) {
+  let total = 0;  
+  for(const num of nums) {
+    total += num;
+  }
+  return total;
+}
+```
+
+This version of the sum() function is both more concise and is easier to read. Also, notice the for...in loop has been replaced with the new for...of loop.
+
+
+
+
+** Quiz 8-16 **
+
+```
+function average(...nums) {
+    // When no arguments are provided, return 0
+    if (nums.length == 0){
+      return 0;
+    };
+
+    let average = 0;
+    let total = 0;
+
+    // Add up all arguments
+    for (const num of nums ){
+        total += num;
+    }
+
+    // Calculate average
+    average = total / nums.length;
+
+    return average;
+}
+```
+
+// Look up `const num in nums`, vs `const num of nums`
 
 
 
@@ -386,9 +429,6 @@ object,
 embed {
     max-width: 100%;
 }
-
-8-15 ...Rest Parameter
-----------------------
 
 
 
