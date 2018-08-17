@@ -376,7 +376,10 @@ function average(...nums) {
 
 `curl -L https://tinyurl.com/zeyq9vc | grep fish | wc -l` or
 `curl -L https://tinyurl.com/zeyq9vc | grep -c fish`
-Get dictionary, search and output for the word fish, then word count each resultant line 
+Get dictionary, search and output for the word fish, then word count each resultant line
+
+`echo $LOGNAME`
+Displays current logged-on username
 
 
 
