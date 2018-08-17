@@ -397,6 +397,17 @@ Resources:
 `https://regexr.com/`
 
 
+Git
+---
+
+Setup VSCode as Git's default editor:
+`git config --global core.editor "code --wait"`
+
+With Sublime:
+`git config --global core.editor "'/Applications/Sublime Text 2.app/Contents/SharedSupport/bin/subl' -n -w"`
+
+With Atom:
+`git config --global core.editor "atom --wait"`
 
 
 
