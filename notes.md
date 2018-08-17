@@ -387,10 +387,14 @@ Default: `echo $PS1`
 `\h:\W \u\$` displays `Sagan:~ danny$`
 `http://bashrcgenerator.com/` - useful for configuring $PS1 variable
 
+`alias ll='ls -lAhGF'` set alias
+`alias` by itself will return all active aliases
 
-
-
-
+Resources:
+`https://www.bash.academy/`
+`http://www.tldp.org/LDP/Bash-Beginners-Guide/html/`
+`http://tldp.org/HOWTO/Bash-Prog-Intro-HOWTO.html`
+`https://regexr.com/`
 
 
 
