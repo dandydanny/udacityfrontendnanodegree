@@ -374,7 +374,8 @@ function average(...nums) {
 `-L` Open (and follow redirects)
 `-o` saves received data
 
-`curl -L https://tinyurl.com/zeyq9vc | grep fish | wc -l`
+`curl -L https://tinyurl.com/zeyq9vc | grep fish | wc -l` or
+`curl -L https://tinyurl.com/zeyq9vc | grep -c fish`
 Get dictionary, search and output for the word fish, then word count each resultant line 
 
 
