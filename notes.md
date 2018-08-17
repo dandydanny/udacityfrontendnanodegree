@@ -344,9 +344,9 @@ This version of the sum() function is both more concise and is easier to read. A
 ```
 function average(...nums) {
     // When no arguments are provided, return 0
-    if (nums.length == 0){
+    if (nums.length === 0){
       return 0;
-    };
+    }
 
     let average = 0;
     let total = 0;
@@ -364,6 +364,23 @@ function average(...nums) {
 ```
 
 // Look up `const num in nums`, vs `const num of nums`
+
+
+9-* Shell Workshop
+------------------
+
+
+`curl -o danny.txt -L 'https://dandydanny.org'`
+`-L` Open (and follow redirects)
+`-o` saves received data
+
+`curl -L https://tinyurl.com/zeyq9vc | grep fish | wc -l`
+Get dictionary, search and output for the word fish, then word count each resultant line 
+
+
+
+
+
 
 
 
