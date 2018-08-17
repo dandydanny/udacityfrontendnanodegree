@@ -381,6 +381,12 @@ Get dictionary, search and output for the word fish, then word count each result
 `echo $LOGNAME`
 Displays current logged-on username
 
+Can configure custom bash prompts using $PS1 variable
+
+Default: `echo $PS1`
+`\h:\W \u\$` displays `Sagan:~ danny$`
+`http://bashrcgenerator.com/` - useful for configuring $PS1 variable
+
 
 
 
