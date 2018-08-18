@@ -423,7 +423,13 @@ With Atom:
   * b to move by a whole page screen
   * press q to quit out of the log (returns to the regular command prompt)
 
+`git log --oneline`
 
+This command:
+
+* lists one commit per line
+* shows the first 7 characters of the commit's SHA
+* shows the commit's message
 
 
 
