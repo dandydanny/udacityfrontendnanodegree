@@ -431,7 +431,13 @@ This command:
 * shows the first 7 characters of the commit's SHA
 * shows the commit's message
 
+`git log --stat`
 
+This command:
+
+* displays the file(s) that have been modified
+* displays the number of lines that have been added/removed
+* displays a summary line with the total number of modified files and lines that have been added/removed
 
 
 
