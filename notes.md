@@ -443,6 +443,31 @@ This command:
 
 
 
+
+
+
+
+
+
+
+
+
+
+19 The Document Object Model
+----------------------------
+
+Whenever the browser encounter angle brackets `<` `>` it emits `StartTag` HTML token. 
+Work done by tokenizer, and tokens are consumed and turned into node objects. 
+
+StartTag token that are embedded in another StartTag-EndTag token signal the parent-child relationship.
+
+
+
+
+
+
+
+
 12-8 Setting the viewport
 <metal name="viewport" content="width=device-width,initial-scale=1">
 
