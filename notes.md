@@ -461,6 +461,50 @@ Work done by tokenizer, and tokens are consumed and turned into node objects.
 
 StartTag token that are embedded in another StartTag-EndTag token signal the parent-child relationship.
 
+ * HTML is received
+ * HTML tags are converted to tokens
+tokens are converted to Nodes
+ * Nodes are converted to the DOM
+
+
+Tokens:
+* DOCTYPE
+* start tag
+* end tag
+* comment
+* character
+* end-of-file
+
+This list of tokens then goes through the tree construction stage. 
+The output of this stage is a tree-like structure - this is the DOM.
+
+> a tree structure that captures the content and properties of the HTML and all the relationships between the nodes
+
+> the DOM is the full, parsed representation of the HTML
+
+DOM is a model (representation) of the relationships and attributes of the HTML document that was received.
+
+Document Object Model <--> Object Model of the Document
+
+DOM can be accessed using a special object provided by the browser: `document`
+
+The document object is provided by the browser and is a representation of the HTML document. This object is not provided by the JavaScript language.
+
+`document` object is not part of JavaScript, but is expected to already exist and be freely accessible to JavaScript code.
+
+**Recap**
+
+The DOM stands for "Document Object Model" and is a tree-like structure that is a representation of the HTML document, the relationship between elements, and contains the content and properties of the elements.
+
+The DOM is *not*:
+
+* part of the JavaScript language
+
+The DOM is:
+
+* constructed from the browser
+* is globally accessible by JavaScript code using the `document` object
+
 
 
 
