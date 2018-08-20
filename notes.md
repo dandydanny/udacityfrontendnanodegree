@@ -524,6 +524,29 @@ Recap:
 * it is called on the document object
 * it returns a single item
 
+Resource:
+https://developer.mozilla.org/en-US/docs/Web/API/Document/getElementById
+
+Select multiple DOM elements (notice the 's' in Elements):
+* `getElementsByClassName('highlight-spanned')`
+* `getElementsByTagName('p')`
+
+They return an array-like thing called `HTMLCollection` of found elements.
+
+```
+// select all elements that have the class "accent-color"
+document.getElementsByClassName('accent-color');
+
+// select all "span" elements
+document.getElementsByTagName('span');
+```
+
+
+
+
+
+
+
 
 
 
