@@ -505,9 +505,24 @@ The DOM is:
 * constructed from the browser
 * is globally accessible by JavaScript code using the `document` object
 
+ `document` object is an object; it has key/value pairs.
 
+DOM method:
+`document.getElementById()`
 
+Does not need a hash mark prepended to ID, since it already knew to expect ID:
 
+```
+// Select the element by the ID "footer"
+document.getElementById('footer');
+```
+
+Can assign to variable and use value later:
+`const footer = document.getElementById('footer');`
+
+Recap:
+* it is called on the document object
+* it returns a single item
 
 
 
