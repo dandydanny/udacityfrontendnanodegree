@@ -541,6 +541,21 @@ document.getElementsByClassName('accent-color');
 document.getElementsByTagName('span');
 ```
 
+19-6 The Node Interface
+-----------------------
+
+Order of operation on how the DOM is constructed (first to last)
+* CHaracters
+* Tags
+* Tokens
+* Nodes
+* DOM
+
+Node = Class, blueprint, interface, with properties and methods
+node = object, stuff built from the blueprint
+
+Properties (data)
+Methods (functionality)
 
 
 
