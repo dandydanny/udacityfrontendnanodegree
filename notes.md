@@ -554,15 +554,47 @@ Order of operation on how the DOM is constructed (first to last)
 Node = Class, blueprint, interface, with properties and methods
 node = object, stuff built from the blueprint
 
-Properties (data)
-Methods (functionality)
+interface = blueprint
+properties = data
+methods = functionality
+
+Ex:
+```
+const bodyEl = document.body
+bodyEl.baseURI
+//returns URI of current page
+```
+
+Element Interface is a blueprint for creating elements
+it is a descendent of the Node Interface.
+Element Interface inherits all of the Node Interface's properties and methods.
+This means that any element (lowercase "e"!) that was created from the Element Interface is also a descendent from the Node Interface...which means the element (lowercase "e"!) is also a node (lowercase "n"!).
+
+In Chrome DevTools, `$0` is the current selected element.
+```
+$0.hasAttribute('class')
+// returns true if element has class attribute  
+$0.className
+// returns the class name of the element, such as "highlight-spanned"
+```
+
+Element interface also has a .getElementsByClassName() method
+The Element Interface inherits from the Node Interface, not the Document Interface
+The Element Interface has its own `.getElementsByClassName()` that does the exact same thing as the one on the `document` object.
+
+Can use the `document` object to select an element, then you can call `.getElementsByClassName()` on that element to receive a list of elements with the class name that are descendents of that specific element
+
+```
+// selects the DOM element with an ID of "sidebar"
+const sidebarElement = document.getElementById('sidebar');
+
+// searches within the "sidebar" element for any elements with a class of "sub-heading" 
+const subHeadingList = sidebarElement.getElementsByClassName('sub-heading');
+```
 
 
-
-
-
-
-
+Both of Node and Element interfaces have properties and methods. 
+Element Interface inherits all of the properties and methods from the Node interface.
 
 
 12-8 Setting the viewport
