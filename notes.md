@@ -592,9 +592,88 @@ const sidebarElement = document.getElementById('sidebar');
 const subHeadingList = sidebarElement.getElementsByClassName('sub-heading');
 ```
 
-
 Both of Node and Element interfaces have properties and methods. 
 Element Interface inherits all of the properties and methods from the Node interface.
+
+These DOM methods to select by ID, class, or tag are similar:
+
+* .document.getElementById()
+* .document.getElementsByClassName()
+* .document.getElementsByTagName()
+
+`.querySelector()` combines all three, based on the argument supplied:
+
+```
+// find and return the element with an ID of "header"
+document.querySelector('#header');
+
+// find and return the first element with the class "header"
+document.querySelector('.header');
+
+// find and return the first <header> element
+document.querySelector('header');
+```
+
+⚠️ `.querySelector()` Returns A Single Element - if there are multiple ones found, it'd return the *first* one.
+
+
+Find the first paragraph element that also has a class of callout
+```
+document.querySelector('p.callout');
+```
+Find the first paragraph element that has a sub-element with a class of callout
+```
+document.querySelector('p .callout');
+```
+
+
+`.querySelectorAll()` return a NodeList of all elements with a certain class or all of one type of element
+```
+// find and return a list of elements with the class "header"
+document.querySelectorAll('.header');
+
+// find and return a list of <header> elements
+document.querySelectorAll('header');
+```
+
+Find all paragraph elements that are descendents of elements that have the class: articles
+```
+document.querySelectorAll('.articles p')
+```
+
+NodeList is not an array, so we can't use `.map`, but NodeList provides `.forEach` method.
+For browser that doesn't support `.forEach`, can iterate using for loop.
+
+```
+const listOfElements = document.querySelectorAll('h2');
+
+for (let i = 0, i < listOfElements, i++){
+  console.log('i is ' + i);
+  console.log(listOfElements[i]);
+}
+```
+
+```
+const allHeaders = document.querySelectorAll('header');
+
+for(let i = 0; i < allHeaders.length; i++){
+    console.dir(allHeaders[i]);
+}
+```
+
+`console.dir(object);` displays JS objects.
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 12-8 Setting the viewport
