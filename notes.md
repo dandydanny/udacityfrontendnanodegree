@@ -665,6 +665,64 @@ for(let i = 0; i < allHeaders.length; i++){
 
 
 
+20 Creating Content with Javascript
+-----------------------------------
+
+* .innerHTML - get and set HTML content in element
+* .textContent - get and set text content in element
+* .innerText - get visible text content in element
+
+Every element inherits properties and methods from the Element Interface.
+This means that every element has an `.innerHTML` property, represents the markup of the element's content.
+
+Can:
+* get an element's (and all of its descendants!) HTML content
+* set an element's HTML content
+
+`.innerHTML` is a property on an element.
+`.innerHTML` returns a `DOMString`.
+
+The `.innerHTML` property sets or returns the HTML content _inside_ the selected element (i.e. between the tags).
+
+There's also the rarely used `.outerHTML` property. `.outerHTML` represents the HTML element itself, *as well as its children*.
+
+```
+const innerResults = document.querySelector('#pick-me').innerHTML; console.log(innerResults);
+// logs the string: "Greetings To All!"
+
+const outerResults = document.querySelector('#pick-me').outerHTML; console.log(outerResults);
+// logs the string: "Greetings To All!"
+```
+
+`.innerHTML` will get/set an element's *HTML* content.
+ If we just want the text content, we can use `.textContent`
+
+The `.textContent` property will:
+
+* set the text content of an element and all its descendants
+* return the text content of an element and all its descendants
+
+```
+nanodegreeCard.textContent
+// returns "New! Data foundations Nanodegree...
+nanodegreeCard.textContent = "I will be the updated text for the nanodegreeCard element!";
+// replaces text in DOM
+```
+
+If given string with HTML tags, `.textContent` will make it show up as text.
+If needing to insert HTML tags, use `.innerHTML`
+
+```
+myElement.textContent = 'The <strong>Greatest</strong> Ice Cream Flavors';
+// tag shows up as text
+
+myElement.innerHTML = 'The <strong>Greatest</strong> Ice Cream Flavors'; 
+// tag rendered
+```
+
+`.textContent` sets/gets the text content of an element.
+
+`.innerText,` returns visible text as shown, abiding by CSS rules, if applied (display: none, captilization, etc)
 
 
 
