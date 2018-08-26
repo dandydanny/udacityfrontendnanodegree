@@ -724,6 +724,40 @@ myElement.innerHTML = 'The <strong>Greatest</strong> Ice Cream Flavors';
 
 `.innerText,` returns visible text as shown, abiding by CSS rules, if applied (display: none, captilization, etc)
 
+20-3 Adding new page content
+----------------------------
+
+`.createElement()` method is a method on the document object:
+
+```
+// creates and returns a <span> element
+document.createElement('span');
+
+// creates and returns an <h3> element
+document.createElement('h3');
+```
+
+```
+const container = document.creatElement('span');
+container // returns <span></span>
+
+container.textContent = ", right now!"
+
+container // returns <span>, right now!</span>, but does not yet show on page
+```
+
+
+using document.createElement() to create an element didn't actually add that newly created element anywhere on the page
+
+Creating an element...just creates it. It doesn't add it to the DOM
+
+Since the element isn't added to the DOM, it doesn't appear in the page (DOM is the parsed representation of the page)
+
+.appendChild() method to append (add to the end) an element to the page
+
+
+
+
 
 
 
