@@ -770,11 +770,29 @@ mainHeading.appendChild(newSpan);
 
 `.appendChild()` methodmust be called on an existing element. You can't call this on the `document` object.
 
+Just like you created new elements with the `.createElement()` method, you can also create new text nodes using the `.createTextNode()` method.
 
+* creates an paragraph element
+* creates a text node
+* appends the text node to the paragraph
+* appends the paragraph to the tag
 
+```
+js const myPara = document.createElement('p'); 
+const textOfParagraph = document.createTextNode('I am the text for the paragraph!');
 
+myPara.appendChild(textOfParagraph); document.body.appendChild(myPara);
+```
 
+`.textContent` property: the code below will provide the exact same result:
 
+```
+js const myPara = document.createElement('p');
+myPara.textContent = 'I am the text for the paragraph!'; 
+document.body.appendChild(myPara); `
+```
+
+Therefore, instead of creating a new text node and appending it to an element, it's faster and easier to just update the element's text with the `.textContent` property.
 
 
 
