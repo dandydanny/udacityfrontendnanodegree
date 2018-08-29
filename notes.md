@@ -795,6 +795,25 @@ document.body.appendChild(myPara); `
 Therefore, instead of creating a new text node and appending it to an element, it's faster and easier to just update the element's text with the `.textContent` property.
 
 
+```
+const mainHeading = document.querySelector('#main-heading');
+const otherHeading = document.querySelector('#other-heading');
+const excitedText = document.createElement('span');
+
+excitedText.textContent = '!!!';
+mainHeading.appendChild(excitedText);
+// mainHeading has 3 exclaimation marks
+otherHeading.appendChild(excitedText);
+// mainHeading's exclaimation mark disappears, and otherHeading now has 3 exclaimation marks
+```
+The `.appendChild()` method will move an element from its current position to the new position.
+
+By definition, the `.appendChild()` method will add an element as the last child of the parent element. It's impossible to put it as the first child or anywhere else...it has to be the last child.
+
+`.insertAdjacentHTML()` gives flexibility on where to add the child element. Two arguments:
+
+* the location of the HTML
+* the HTML text that is going to be inserted
 
 
 
