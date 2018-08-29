@@ -755,6 +755,22 @@ Since the element isn't added to the DOM, it doesn't appear in the page (DOM is 
 
 .appendChild() method to append (add to the end) an element to the page
 
+to use the .appendChild() method, it needs to be called on another element, not the document object
+
+```
+// create a brand new <span> element
+const newSpan = document.createElement('span');
+
+// select the first (main) heading of the page
+const mainHeading = document.querySelector('h1');
+
+// add the the <span> element as the last child element of the main heading
+mainHeading.appendChild(newSpan);
+```
+
+`.appendChild()` methodmust be called on an existing element. You can't call this on the `document` object.
+
+
 
 
 
