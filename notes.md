@@ -852,6 +852,13 @@ Some important things to note are:
 * an element's `.textContent` property is used more often than creating a text node with the `.createTextNode()` method
 * the `.insertAdjacentHTML()` method's second argument has to be text, you can't pass an element
 
+20-4 Remove Page Content
+------------------------
+
+`.removeChild()` - opposite of the .appendChild() method; requires: a parent element & the child element that will be removed.
+```
+<parent-element>.removeChild(<child-to-remove>);
+```
 
 
 
