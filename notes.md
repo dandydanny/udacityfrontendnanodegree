@@ -855,10 +855,33 @@ Some important things to note are:
 20-4 Remove Page Content
 ------------------------
 
-`.removeChild()` - opposite of the .appendChild() method; requires: a parent element & the child element that will be removed.
+`.removeChild()` - opposite of the `.appendChild()` method; requires: a parent element & the child element that will be removed.
 ```
 <parent-element>.removeChild(<child-to-remove>);
 ```
+Both require access to parent to function.  
+
+However, we don't actually need to have the parent element because there is a workaround.
+
+Just like the `.firstElementChild` property can be called on a parent element to access its first element, every element also has a `parentElement` property that refers to its parent.
+
+If we have access to the child element that we're about to add or remove, you can use the `parentElement` property to "move focus" to the element's parent. Then we can call `.removeChild()` (or `.appendChild()`) on that referenced parent element.
+
+```
+const mainHeading = document.querySelector('h1');
+
+mainHeading.parentElement.removeChild(mainHeading);
+```
+
+
+
+
+
+
+
+
+
+
 
 
 
