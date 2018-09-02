@@ -881,6 +881,16 @@ const mainHeading = document.querySelector('h1');
 mainHeading.remove();
 ```
 
+20-5 Style Page Content with Javascript
+---------------------------------------
+
+CSS specificity, from least specific to most specific:
+* rules in a style sheet
+* rules in `<style>` tag
+* rules in a tag's style attribute
+
+The closer the style rule is to an element, the more specific it is.
+
 
 
 
