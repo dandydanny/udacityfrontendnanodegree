@@ -891,9 +891,23 @@ CSS specificity, from least specific to most specific:
 
 The closer the style rule is to an element, the more specific it is.
 
+```
+const mainHeading = document.querySelector('h1');
 
+mainHeading.style.color = 'red';
+```
 
+When using the .style property, you can only modify one CSS style at a time.
 
+Use the `.style.cssText` property to set multiple CSS styles at once
+
+```
+const mainHeading = document.querySelector('h1');
+
+mainHeading.style.cssText = 'color: blue; background-color: orange; font-size: 3.5em';
+```
+
+Notice that when using the `.style.cssText` property, you write the CSS styles just as you would in a stylesheet; so you write `font-size` rather than `fontSize`. This is different than using the individual .style.<property> way.
 
 
 
