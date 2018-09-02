@@ -873,7 +873,13 @@ const mainHeading = document.querySelector('h1');
 mainHeading.parentElement.removeChild(mainHeading);
 ```
 
+`remove()` can be called directly on the element to delete.
 
+```
+const mainHeading = document.querySelector('h1');
+
+mainHeading.remove();
+```
 
 
 
